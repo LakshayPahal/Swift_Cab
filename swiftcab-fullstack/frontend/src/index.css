@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional custom styles */
+body {
+  min-height: 100vh;
+  background-color: #f5f7ff;
+}
+
+@layer components {
+  .btn {
+    @apply inline-block py-3 px-6 rounded-lg font-medium cursor-pointer transition-all duration-300 text-center shadow-md hover:shadow-lg transform hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-dark;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary border border-primary hover:bg-primary hover:text-white;
+  }
+  
+  .container {
+    @apply mx-auto px-4 max-w-7xl;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-all duration-300;
+  }
+  
+  .form-group {
+    @apply mb-4;
+  }
+  
+  .form-input {
+    @apply w-full p-3 border border-gray-300 rounded-lg outline-none transition duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20;
+  }
+  
+  .form-label {
+    @apply block mb-2 font-medium text-gray-dark;
+  }
+  
+  .badge {
+    @apply inline-block px-3 py-1 text-xs font-medium rounded-full;
+  }
+  
+  .badge-pending {
+    @apply bg-warning/20 text-warning;
+  }
+  
+  .badge-onway {
+    @apply bg-secondary/20 text-secondary;
+  }
+  
+  .badge-arrived {
+    @apply bg-secondary text-white;
+  }
+  
+  .badge-completed {
+    @apply bg-success text-white;
+  }
+  
+  .badge-cancelled {
+    @apply bg-error/20 text-error;
+  }
+
+  /* Added new component classes */
+  .section-title {
+    @apply text-3xl font-bold text-dark mb-8 relative pb-3 inline-block;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-1/2 h-1 bg-primary rounded;
+  }
+
+  .feature-icon {
+    @apply w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 text-2xl;
+  }
+
+  .input-icon {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray;
+  }
+
+  .input-with-icon {
+    @apply pl-10;
+  }
+
+  .timeline-dot {
+    @apply w-4 h-4 rounded-full z-10;
+  }
+
+  .timeline-line {
+    @apply h-0.5 flex-1 mx-1;
+  }
+} 
